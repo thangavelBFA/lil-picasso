@@ -133,6 +133,12 @@ const HeroSection = () => {
                   <div className="text-sm text-muted-foreground">Years Experience</div>
                 </div>
               </div>
+            <a
+              href="/gallery"
+              className="mt-10 inline-block px-8 py-3 rounded-2xl bg-primary text-primary-foreground font-semibold text-lg shadow-lg hover:bg-primary/90 transition-colors border border-primary"
+            >
+              View Full Gallery
+            </a>
             </div>
           </div>
         </div>

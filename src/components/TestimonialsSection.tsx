@@ -2,8 +2,10 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Star, Quote, Award, Users, Camera, Trophy } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 const TestimonialsSection = () => {
+  const navigate = useNavigate();
   const openWhatsApp = () => {
     window.open('https://wa.me/916360799842?text=Hi! I would like to see the student gallery and learn more about Lil-Picasso.', '_blank');
   };
@@ -141,7 +143,7 @@ const TestimonialsSection = () => {
               <Button 
                 variant="hero" 
                 size="lg"
-                onClick={openWhatsApp}
+                onClick={() => navigate("/gallery")}
                 aria-label="View full student gallery"
               >
                 <Camera className="w-5 h-5 mr-2" />
