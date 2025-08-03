@@ -4,6 +4,10 @@ import { ArrowRight, Star, Users, Award, Heart } from "lucide-react";
 import heroImage from "@/assets/hero-art-children.jpg";
 
 const HeroSection = () => {
+  const openWhatsApp = () => {
+    window.open('https://wa.me/916360799842?text=Hi! I would like to start my child\'s creative journey at Lil-Picasso.', '_blank');
+  };
+
   return (
     <section id="home" className="relative min-h-screen bg-gradient-to-br from-background to-muted overflow-hidden">
       {/* Background Pattern */}
@@ -68,11 +72,23 @@ const HeroSection = () => {
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button size="lg" variant="hero" className="text-lg px-8 py-6">
+              <Button 
+                size="lg" 
+                variant="hero" 
+                className="text-lg px-8 py-6"
+                onClick={openWhatsApp}
+                aria-label="Start your child's creative journey with Lil-Picasso"
+              >
                 Start Your Child's Journey
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Button>
-              <Button size="lg" variant="outline" className="text-lg px-8 py-6">
+              <Button 
+                size="lg" 
+                variant="outline" 
+                className="text-lg px-8 py-6"
+                onClick={openWhatsApp}
+                aria-label="Watch demo class via WhatsApp"
+              >
                 Watch Demo Class
               </Button>
             </div>

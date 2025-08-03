@@ -125,5 +125,144 @@
 
   body {
     @apply bg-background text-foreground;
+    line-height: 1.6;
+    text-rendering: optimizeSpeed;
+  }
+
+  /* Base font sizes for mobile-first design */
+  html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+  }
+  
+  /* Tablet and up */
+  @media (min-width: 768px) {
+    html {
+      font-size: 17px;
+    }
+  }
+  
+  /* Desktop and up */
+  @media (min-width: 1024px) {
+    html {
+      font-size: 18px;
+    }
+  }
+
+  /* High contrast mode support */
+  @media (prefers-contrast: high) {
+    :root {
+      --border: 0 0% 20%;
+      --ring: 0 0% 20%;
+    }
+  }
+
+  /* Reduced motion support */
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+
+  /* Focus management for better accessibility */
+  :focus-visible {
+    outline: 2px solid hsl(var(--ring));
+    outline-offset: 2px;
+  }
+
+  /* Ensure touch targets are large enough */
+  button, 
+  a, 
+  input, 
+  textarea, 
+  select {
+    min-height: 44px;
+  }
+
+  /* Better text readability */
+  h1, h2, h3, h4, h5, h6 {
+    line-height: 1.2;
+    color: hsl(var(--foreground));
+  }
+
+  /* Enhanced responsive utilities */
+  .container {
+    @apply px-4 sm:px-6 lg:px-8;
+  }
+
+  /* Custom shadow utilities */
+  .shadow-warm {
+    box-shadow: var(--shadow-warm);
+  }
+
+  .shadow-creative {
+    box-shadow: var(--shadow-creative);
+  }
+
+  .shadow-gentle {
+    box-shadow: var(--shadow-gentle);
+  }
+
+  /* Responsive text sizing */
+  .text-responsive-lg {
+    @apply text-lg sm:text-xl lg:text-2xl;
+  }
+
+  .text-responsive-xl {
+    @apply text-xl sm:text-2xl lg:text-3xl;
+  }
+
+  .text-responsive-2xl {
+    @apply text-2xl sm:text-3xl lg:text-4xl;
+  }
+
+  .text-responsive-3xl {
+    @apply text-3xl sm:text-4xl lg:text-5xl;
+  }
+
+  /* Enhanced gradient backgrounds */
+  .bg-gradient-subtle {
+    background: var(--gradient-subtle);
+  }
+
+  .bg-gradient-warm {
+    background: var(--gradient-warm);
+  }
+
+  .bg-gradient-creative {
+    background: var(--gradient-creative);
+  }
+
+  /* Cross-browser compatibility fixes */
+  input, textarea, select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  }
+
+  /* Better image handling */
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  /* Skip link for screen readers */
+  .skip-link {
+    position: absolute;
+    left: -9999px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+  }
+
+  .skip-link:focus {
+    position: static;
+    width: auto;
+    height: auto;
   }
 }

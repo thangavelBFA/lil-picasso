@@ -4,6 +4,9 @@ import { Badge } from "@/components/ui/badge";
 import { Star, Quote, Award, Users, Camera, Trophy } from "lucide-react";
 
 const TestimonialsSection = () => {
+  const openWhatsApp = () => {
+    window.open('https://wa.me/916360799842?text=Hi! I would like to see the student gallery and learn more about Lil-Picasso.', '_blank');
+  };
   const testimonials = [
     {
       name: "Priya Sharma",
@@ -135,11 +138,21 @@ const TestimonialsSection = () => {
               View hundreds of inspiring artworks created by students across all age groups
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button variant="hero" size="lg">
+              <Button 
+                variant="hero" 
+                size="lg"
+                onClick={openWhatsApp}
+                aria-label="View full student gallery"
+              >
                 <Camera className="w-5 h-5 mr-2" />
                 View Full Gallery
               </Button>
-              <Button variant="outline" size="lg">
+              <Button 
+                variant="outline" 
+                size="lg"
+                onClick={openWhatsApp}
+                aria-label="View competition winners"
+              >
                 <Trophy className="w-5 h-5 mr-2" />
                 Competition Winners
               </Button>
@@ -172,7 +185,11 @@ const TestimonialsSection = () => {
                   </div>
                 ))}
               </div>
-              <Button variant="creative">
+              <Button 
+                variant="creative"
+                onClick={openWhatsApp}
+                aria-label="View ceremony photos via WhatsApp"
+              >
                 View Ceremony Photos
               </Button>
             </div>

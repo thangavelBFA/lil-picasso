@@ -19,6 +19,17 @@ import {
 } from "lucide-react";
 
 const ContactSection = () => {
+  const openWhatsApp = (message?: string) => {
+    const defaultMessage = 'Hi! I would like to book a free demo class for my child.';
+    const finalMessage = message || defaultMessage;
+    window.open(`https://wa.me/916360799842?text=${encodeURIComponent(finalMessage)}`, '_blank');
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    openWhatsApp('Hi! I have submitted the demo class form on your website. Please contact me for further details.');
+  };
+
   return (
     <section id="contact" className="py-20 bg-gradient-subtle">
       <div className="container mx-auto px-4">
@@ -41,7 +52,7 @@ const ContactSection = () => {
           <Card className="p-8 bg-white shadow-creative">
             <h3 className="text-2xl font-bold text-foreground mb-6">Book Your Free Demo Class</h3>
             
-            <form className="space-y-6">
+            <form className="space-y-6" onSubmit={handleSubmit}>
               <div className="grid sm:grid-cols-2 gap-4">
                 <div>
                   <label className="text-sm font-medium text-foreground mb-2 block">Parent's Name *</label>
@@ -92,7 +103,13 @@ const ContactSection = () => {
                 />
               </div>
               
-              <Button className="w-full" size="lg" variant="hero">
+              <Button 
+                className="w-full" 
+                size="lg" 
+                variant="hero" 
+                type="submit"
+                aria-label="Book free demo class"
+              >
                 <Send className="w-5 h-5 mr-2" />
                 Book Free Demo Class
               </Button>
@@ -155,7 +172,13 @@ const ContactSection = () => {
                 <p className="opacity-90">
                   Send us your child's handwriting sample for immediate feedback!
                 </p>
-                <Button variant="secondary" size="lg" className="bg-white text-green-600 hover:bg-gray-100">
+                <Button 
+                  variant="secondary" 
+                  size="lg" 
+                  className="bg-white text-green-600 hover:bg-gray-100"
+                  onClick={() => openWhatsApp('Hi! I would like to send my child\'s handwriting sample for assessment.')}
+                  aria-label="WhatsApp for handwriting assessment"
+                >
                   WhatsApp Now
                 </Button>
               </div>
@@ -250,7 +273,12 @@ const ContactSection = () => {
                 <p className="text-sm text-muted-foreground">
                   Includes premium materials, free delivery, and 5-7 day completion
                 </p>
-                <Button className="w-full" variant="creative">
+                <Button 
+                  className="w-full" 
+                  variant="creative"
+                  onClick={() => openWhatsApp('Hi! I would like to order a custom portrait painting. Please share the details.')}
+                  aria-label="Order custom portrait painting"
+                >
                   Order Portrait Now
                 </Button>
                 <p className="text-xs text-muted-foreground">

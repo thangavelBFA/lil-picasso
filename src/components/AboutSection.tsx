@@ -4,6 +4,10 @@ import { Users, Target, Trophy, Heart, BookOpen, Lightbulb } from "lucide-react"
 import founderImage from "@/assets/founder-portrait.jpg";
 
 const AboutSection = () => {
+  const openWhatsApp = () => {
+    window.open('https://wa.me/916360799842?text=Hi! I would like to know more about Lil-Picasso\'s teaching approach.', '_blank');
+  };
+
   return (
     <section id="about" className="py-20 bg-gradient-subtle">
       <div className="container mx-auto px-4">
@@ -131,8 +135,20 @@ const AboutSection = () => {
               </div>
 
               <div className="flex flex-wrap gap-3">
-                <Button variant="hero">Learn More About Our Approach</Button>
-                <Button variant="outline">Schedule a Meeting</Button>
+                <Button 
+                  variant="hero"
+                  onClick={openWhatsApp}
+                  aria-label="Learn more about our teaching approach"
+                >
+                  Learn More About Our Approach
+                </Button>
+                <Button 
+                  variant="outline"
+                  onClick={openWhatsApp}
+                  aria-label="Schedule a meeting with our team"
+                >
+                  Schedule a Meeting
+                </Button>
               </div>
             </div>
           </div>

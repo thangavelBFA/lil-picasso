@@ -17,6 +17,10 @@ import {
 } from "lucide-react";
 
 const ProgramsSection = () => {
+  const openWhatsApp = (program: string) => {
+    window.open(`https://wa.me/916360799842?text=Hi! I would like to know more about the ${program} program at Lil-Picasso.`, '_blank');
+  };
+
   return (
     <section id="programs" className="py-20 bg-gradient-subtle">
       <div className="container mx-auto px-4">
@@ -74,7 +78,12 @@ const ProgramsSection = () => {
                     <span className="text-muted-foreground">Small groups</span>
                   </div>
                 </div>
-                <Button className="w-full" variant="hero">
+                <Button 
+                  className="w-full" 
+                  variant="hero"
+                  onClick={() => openWhatsApp('Little Fingers')}
+                  aria-label="Learn more about Little Fingers program"
+                >
                   Learn More
                 </Button>
               </div>
@@ -122,7 +131,12 @@ const ProgramsSection = () => {
                     <span className="text-muted-foreground">Goal-oriented</span>
                   </div>
                 </div>
-                <Button className="w-full" variant="creative">
+                <Button 
+                  className="w-full" 
+                  variant="creative"
+                  onClick={() => openWhatsApp('Intermediate Tweenies')}
+                  aria-label="Learn more about Intermediate Tweenies program"
+                >
                   Learn More
                 </Button>
               </div>
@@ -170,7 +184,12 @@ const ProgramsSection = () => {
                     <span className="text-muted-foreground">Certificate</span>
                   </div>
                 </div>
-                <Button className="w-full" variant="success">
+                <Button 
+                  className="w-full" 
+                  variant="success"
+                  onClick={() => openWhatsApp('Advanced')}
+                  aria-label="Learn more about Advanced program"
+                >
                   Learn More
                 </Button>
               </div>
@@ -240,7 +259,12 @@ const ProgramsSection = () => {
                   <div className="text-2xl font-bold text-primary">₹10,200</div>
                   <div className="text-sm text-muted-foreground">Payable in 3 installments</div>
                 </div>
-                <Button className="w-full" variant="hero">
+                <Button 
+                  className="w-full" 
+                  variant="hero"
+                  onClick={() => openWhatsApp('Handwriting Level 1')}
+                  aria-label="Enroll in Handwriting Level 1 program"
+                >
                   Enroll in Level 1
                 </Button>
               </div>
@@ -288,7 +312,12 @@ const ProgramsSection = () => {
                 </p>
               </div>
 
-              <Button className="w-full" variant="creative">
+              <Button 
+                className="w-full" 
+                variant="creative"
+                onClick={() => openWhatsApp('Handwriting Level 2')}
+                aria-label="Learn about Handwriting Level 2 program"
+              >
                 Learn About Level 2
               </Button>
             </Card>
@@ -319,7 +348,12 @@ const ProgramsSection = () => {
           </div>
 
           <div className="text-center mt-8">
-            <Button size="lg" variant="hero">
+            <Button 
+              size="lg" 
+              variant="hero"
+              onClick={() => openWhatsApp('enrollment process')}
+              aria-label="Start your child's creative journey today"
+            >
               <Heart className="w-5 h-5 mr-2" />
               Start Your Child's Journey Today
             </Button>

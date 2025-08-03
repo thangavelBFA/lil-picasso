@@ -13,6 +13,10 @@ const Header = () => {
     }
   };
 
+  const openWhatsApp = () => {
+    window.open('https://wa.me/916360799842?text=Hi! I would like to know more about Lil-Picasso art programs.', '_blank');
+  };
+
   return (
     <header className="bg-white/95 backdrop-blur-sm border-b border-border sticky top-0 z-50 shadow-gentle">
       <div className="container mx-auto px-4 py-3">
@@ -70,11 +74,21 @@ const Header = () => {
 
           {/* CTA Buttons */}
           <div className="hidden md:flex items-center space-x-3">
-            <Button variant="outline" size="sm">
+            <Button 
+              variant="outline" 
+              size="sm"
+              onClick={() => window.open('tel:+916360799842')}
+              aria-label="Call Lil-Picasso"
+            >
               <Phone className="w-4 h-4 mr-2" />
               Call Now
             </Button>
-            <Button variant="hero" size="sm">
+            <Button 
+              variant="hero" 
+              size="sm"
+              onClick={openWhatsApp}
+              aria-label="Enroll via WhatsApp"
+            >
               <MessageSquare className="w-4 h-4 mr-2" />
               Enroll Now
             </Button>
@@ -130,11 +144,21 @@ const Header = () => {
                 Contact
               </button>
               <div className="flex flex-col space-y-2 pt-3">
-                <Button variant="outline" size="sm">
+                <Button 
+                  variant="outline" 
+                  size="sm"
+                  onClick={() => window.open('tel:+916360799842')}
+                  aria-label="Call Lil-Picasso"
+                >
                   <Phone className="w-4 h-4 mr-2" />
                   Call Now
                 </Button>
-                <Button variant="hero" size="sm">
+                <Button 
+                  variant="hero" 
+                  size="sm"
+                  onClick={openWhatsApp}
+                  aria-label="Enroll via WhatsApp"
+                >
                   <MessageSquare className="w-4 h-4 mr-2" />
                   Enroll Now
                 </Button>
