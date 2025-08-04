@@ -27,7 +27,7 @@ const ProgramsSection = () => {
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-            Our <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Programs</span>
+          Our <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Courses</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             Structured, age-appropriate programs designed to nurture creativity and build essential life skills 

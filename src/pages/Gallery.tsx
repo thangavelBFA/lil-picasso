@@ -7,7 +7,7 @@ import { PENCIL_SKETCHES } from "@/assets/pencil-sketch-cdn";
 const IMAGES_PER_PAGE = 9;
 
 const Gallery = () => {
-  const [tab, setTab] = useState("paintings");
+  const [tab, setTab] = useState("pencil");
   const [page, setPage] = useState(1);
   const [preview, setPreview] = useState<string | null>(null);
 
@@ -28,16 +28,16 @@ const Gallery = () => {
         <h1 className="text-4xl md:text-5xl font-bold text-center mb-10">Gallery</h1>
         <div className="flex justify-center mb-8">
           <button
-            className={`px-6 py-2 rounded-l-2xl border border-primary font-semibold transition-colors ${tab === "paintings" ? "bg-primary text-primary-foreground" : "bg-white text-primary hover:bg-primary/10"}`}
-            onClick={() => handleTab("paintings")}
-          >
-            Paintings
-          </button>
-          <button
-            className={`px-6 py-2 rounded-r-2xl border-t border-b border-r border-primary font-semibold transition-colors ${tab === "pencil" ? "bg-primary text-primary-foreground" : "bg-white text-primary hover:bg-primary/10"}`}
+            className={`px-6 py-2 rounded-l-2xl border border-primary font-semibold transition-colors ${tab === "pencil" ? "bg-primary text-primary-foreground" : "bg-white text-primary hover:bg-primary/10"}`}
             onClick={() => handleTab("pencil")}
           >
             Pencil Sketch
+          </button>
+          <button
+            className={`px-6 py-2 rounded-r-2xl border-t border-b border-r border-primary font-semibold transition-colors ${tab === "paintings" ? "bg-primary text-primary-foreground" : "bg-white text-primary hover:bg-primary/10"}`}
+            onClick={() => handleTab("paintings")}
+          >
+            Paintings
           </button>
         </div>
         {images.length === 0 ? (

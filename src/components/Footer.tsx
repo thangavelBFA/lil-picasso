@@ -53,7 +53,7 @@ const Footer = () => {
             <nav className="space-y-3">
               {[
                 "About Us",
-                "Our Programs",
+                "Our Courses",
                 "Why Art Matters",
                 "Student Gallery",
                 "Testimonials",
@@ -70,9 +70,9 @@ const Footer = () => {
             </nav>
           </div>
 
-          {/* Programs */}
+          {/* Courses */}
           <div className="space-y-6">
-            <h4 className="text-lg font-semibold">Our Programs</h4>
+            <h4 className="text-lg font-semibold">Our Courses</h4>
             <div className="space-y-3">
               {[
                 { name: "Little Fingers", age: "Ages 3.5-9" },

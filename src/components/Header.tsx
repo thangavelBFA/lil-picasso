@@ -98,7 +98,7 @@ const Header = () => {
               onClick={() => navigate("/programs")}
               className={`transition-colors px-1 ${location.pathname === "/programs" ? "text-primary font-bold" : "text-foreground hover:text-primary"}`}
             >
-              Programs
+              Courses
             </button>
             <button
               onClick={() => scrollToSection("why-art")}
@@ -178,7 +178,7 @@ const Header = () => {
                 onClick={() => { navigate("/programs"); setIsMenuOpen(false); }}
                 className={`text-left transition-colors py-2 px-1 ${location.pathname === "/programs" ? "text-primary font-bold" : "text-foreground hover:text-primary"}`}
               >
-                Programs
+                Courses
               </button>
               <button
                 onClick={() => scrollToSection("why-art")}
