@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import logo from "@/assets/logo.jpg";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Phone, MessageSquare } from "lucide-react";
 import { useNavigate, useLocation } from "react-router-dom";
@@ -61,9 +62,12 @@ const Header = () => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <div className="flex items-center space-x-2">
-            <div className="w-10 h-10 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center">
-              <span className="text-white font-bold text-lg">LP</span>
-            </div>
+            <img
+              src={logo}
+              alt="Lil-Picasso Logo"
+              className="w-10 h-10 rounded-full object-cover border border-primary shadow"
+              draggable="false"
+            />
             <div>
               <h1 className="text-xl font-bold text-foreground">Lil-Picasso</h1>
               <p className="text-xs text-muted-foreground">Art School</p>

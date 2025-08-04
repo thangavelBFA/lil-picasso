@@ -179,7 +179,7 @@ const Footer = () => {
         {/* Bottom Footer */}
         <div className="grid md:grid-cols-3 gap-6 items-center text-center md:text-left">
           <div className="text-white/60">
-            <p>&copy; 2024 Lil-Picasso Creative Educations Pvt. Ltd.</p>
+            <p>&copy; 2025 Lil-Picasso Creative Educations Pvt. Ltd.</p>
             <p className="text-sm">All rights reserved.</p>
           </div>
           
