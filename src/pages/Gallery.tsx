@@ -77,8 +77,24 @@ const Gallery = () => {
         {/* Preview Modal */}
         {preview && (
           <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70" onClick={() => setPreview(null)}>
-            <div className="bg-white rounded-2xl shadow-2xl p-4 max-w-3xl w-full relative" onClick={e => e.stopPropagation()}>
+            <div className="bg-white rounded-2xl shadow-2xl p-4 max-w-3xl w-full relative flex items-center" onClick={e => e.stopPropagation()}>
+              {/* Left Arrow */}
+              <button
+                className="absolute left-2 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-primary text-primary hover:text-primary-foreground rounded-full p-2 shadow-lg z-10"
+                onClick={e => {
+                  e.stopPropagation();
+                  const idx = images.indexOf(preview);
+                  if (idx > 0) setPreview(images[idx - 1]);
+                }}
+                aria-label="Previous image"
+                disabled={images.indexOf(preview) === 0}
+                style={{opacity: images.indexOf(preview) === 0 ? 0.4 : 1}}
+              >
+                <span className="text-2xl">&#8592;</span>
+              </button>
+              {/* Close Button */}
               <button className="absolute top-2 right-2 text-2xl text-gray-500 hover:text-primary" onClick={() => setPreview(null)}>&times;</button>
+              {/* Image */}
               <img
                 src={preview}
                 alt="Preview"
@@ -86,6 +102,20 @@ const Gallery = () => {
                 draggable="false"
                 onContextMenu={e => e.preventDefault()}
               />
+              {/* Right Arrow */}
+              <button
+                className="absolute right-2 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-primary text-primary hover:text-primary-foreground rounded-full p-2 shadow-lg z-10"
+                onClick={e => {
+                  e.stopPropagation();
+                  const idx = images.indexOf(preview);
+                  if (idx < images.length - 1) setPreview(images[idx + 1]);
+                }}
+                aria-label="Next image"
+                disabled={images.indexOf(preview) === images.length - 1}
+                style={{opacity: images.indexOf(preview) === images.length - 1 ? 0.4 : 1}}
+              >
+                <span className="text-2xl">&#8594;</span>
+              </button>
             </div>
           </div>
         )}
