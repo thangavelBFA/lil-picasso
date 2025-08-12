@@ -1,3 +1,4 @@
+import { studentGalleryImages } from "@/assets/student-gallery-images";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -122,15 +123,14 @@ const TestimonialsSection = () => {
 
           {/* Placeholder for Gallery Grid */}
           <div className="grid md:grid-cols-3 gap-6 mb-8">
-            {[1, 2, 3, 4, 5, 6].map((item) => (
-              <Card key={item} className="aspect-square bg-gradient-to-br from-primary/10 to-secondary/10 border border-primary/20 overflow-hidden">
-                <div className="w-full h-full flex items-center justify-center">
-                  <div className="text-center space-y-2">
-                    <Camera className="w-12 h-12 text-primary mx-auto" />
-                    <p className="text-sm font-medium text-primary">Student Artwork</p>
-                    <p className="text-xs text-muted-foreground">Amazing creations by our students</p>
-                  </div>
-                </div>
+            {studentGalleryImages.map((imgUrl, idx) => (
+              <Card key={imgUrl} className="aspect-square bg-gradient-to-br from-primary/10 to-secondary/10 border border-primary/20 overflow-hidden">
+                <img
+                  src={imgUrl}
+                  alt={`Student artwork ${idx + 1}`}
+                  className="w-full h-full object-cover rounded-xl"
+                  loading="lazy"
+                />
               </Card>
             ))}
           </div>
