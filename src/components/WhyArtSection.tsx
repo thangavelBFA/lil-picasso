@@ -201,15 +201,6 @@ const WhyArtSection = () => {
               <Smile className="w-5 h-5 mr-2" />
               Book Free Demo Class
             </Button>
-            <Button 
-              size="lg" 
-              variant="outline" 
-              className="text-lg px-8 bg-white/10 hover:bg-white/20 border-white/30"
-              onClick={openWhatsApp}
-              aria-label="Download curriculum via WhatsApp"
-            >
-              Download Curriculum
-            </Button>
           </div>
         </div>
       </div>

@@ -1,7 +1,7 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Users, Target, Trophy, Heart, BookOpen, Lightbulb } from "lucide-react";
-import founderImage from "@/assets/founder-portrait.jpg";
+// import founderImage from "@/assets/founder-portrait.jpg";
 
 const AboutSection = () => {
   const openWhatsApp = () => {
@@ -93,7 +93,7 @@ const AboutSection = () => {
             <div className="lg:col-span-1">
               <div className="relative">
                 <img
-                  src={founderImage}
+                  src="https://res.cloudinary.com/dqtiif615/image/upload/v1755003826/Thangavel_2_1_bocklj.png"
                   alt="Thangavel N - Founder"
                   className="w-full max-w-sm mx-auto rounded-2xl shadow-warm"
                 />

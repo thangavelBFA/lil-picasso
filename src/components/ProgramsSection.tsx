@@ -41,7 +41,7 @@ const ProgramsSection = () => {
           <Card className="bg-white shadow-warm hover:shadow-creative transition-all duration-300 overflow-hidden">
             <div className="bg-gradient-to-r from-primary to-primary-light p-6 text-white">
               <Baby className="w-12 h-12 mb-4" />
-              <h3 className="text-2xl font-bold mb-2">Little Fingers</h3>
+              <h3 className="text-2xl font-bold mb-2">Foundation</h3>
               <p className="opacity-90">Ages 3.5 - 9 years</p>
             </div>
             <div className="p-6">
@@ -94,7 +94,7 @@ const ProgramsSection = () => {
           <Card className="bg-white shadow-warm hover:shadow-creative transition-all duration-300 overflow-hidden">
             <div className="bg-gradient-to-r from-secondary to-accent p-6 text-white">
               <GraduationCap className="w-12 h-12 mb-4" />
-              <h3 className="text-2xl font-bold mb-2">Intermediate Tweenies</h3>
+              <h3 className="text-2xl font-bold mb-2">Intermediate</h3>
               <p className="opacity-90">Ages 10 - 13 years</p>
             </div>
             <div className="p-6">
@@ -195,6 +195,20 @@ const ProgramsSection = () => {
               </div>
             </div>
           </Card>
+        </div>
+
+         {/* Embedded YouTube Video */}
+        <div className="flex justify-center mb-16">
+          <iframe
+            width="80%"
+            height="400"
+            src="https://www.youtube.com/embed/75bMkH3bbQQ?si=OKjON5vLTRFk_u-8"
+            title="YouTube video player"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowFullScreen
+            className="rounded-xl shadow-lg"
+          ></iframe>
         </div>
 
         {/* Handwriting Institute */}

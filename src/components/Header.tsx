@@ -65,7 +65,7 @@ const Header = () => {
             <img
               src={logo}
               alt="Lil-Picasso Logo"
-              className="w-10 h-10 rounded-full object-cover border border-primary shadow"
+              className="w-14 h-14 rounded-full object-cover shadow"
               draggable="false"
             />
             <div>
