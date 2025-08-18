@@ -138,7 +138,7 @@ const ContactSection = () => {
                   </div>
                   <div>
                     <p className="font-medium text-foreground">Email Us</p>
-                    <p className="text-muted-foreground">info@lilpicasso.com</p>
+                    <p className="text-muted-foreground">lilpicassoart@gmail.com</p>
                   </div>
                 </div>
                 

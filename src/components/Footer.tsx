@@ -106,7 +106,7 @@ const Footer = () => {
                 <Mail className="w-5 h-5 text-primary mt-1" />
                 <div>
                   <p className="font-medium">Email</p>
-                  <p className="text-white/80">info@lilpicasso.com</p>
+                  <p className="text-white/80">lilpicassoart@gmail.com</p>
                 </div>
               </div>
               
