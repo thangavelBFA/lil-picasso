@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import logo from "@/assets/logo.jpg";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Phone, MessageSquare } from "lucide-react";
 import { useNavigate, useLocation } from "react-router-dom";
@@ -14,14 +13,7 @@ const Header = () => {
     <header className="bg-white/95 backdrop-blur-sm border-b border-border sticky top-0 z-50 shadow-gentle">
       <div className="container mx-auto px-4 py-3">
         <div className="flex items-center justify-between">
-          {/* Logo */}
           <div className="flex items-center space-x-2">
-            <img
-              src={logo}
-              alt="Lil-Picasso Logo"
-              className="w-14 h-14 rounded-full object-cover shadow"
-              draggable="false"
-            />
             <div>
               <h1 className="text-xl font-bold text-foreground">Lil-Picasso</h1>
               <p className="text-xs text-muted-foreground">Art School</p>

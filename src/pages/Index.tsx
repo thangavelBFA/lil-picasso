@@ -1,6 +1,5 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import logo from "@/assets/logo.jpg";
 import { Instagram, Facebook, Youtube } from "lucide-react";
 
 const IG_URL = "#";
@@ -15,7 +14,9 @@ const Index = () => {
 
       <main className="flex-1 flex items-center justify-center px-4">
         <div className="max-w-2xl w-full text-center py-20">
-          <img src={logo} alt="Lil-Picasso Logo" className="w-28 h-28 mx-auto rounded-full shadow mb-6" />
+          <div className="w-28 h-28 mx-auto rounded-full shadow mb-6 flex items-center justify-center bg-muted">
+            <span className="text-xl font-bold">LP</span>
+          </div>
           <h1 className="text-5xl font-extrabold mb-4">Coming Soon</h1>
           <p className="text-lg text-muted-foreground mb-8">
             We're working on something beautiful. We'll be back shortly — in the meantime,
